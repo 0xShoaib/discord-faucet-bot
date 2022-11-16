@@ -44,10 +44,13 @@ export const handleTransaction = async (
   });
 
   await tx?.wait().then(async (response) => {
-    // Update the database record for the `combination` for `address`
-    await updateFundsLastRequestDate(address, combination);
+    let status = "error";
 
-    const status = response.status === 1 ? "success" : "error";
+    if (response.status === 1) {
+      status = "success";
+      // Update the database record for the `combination` for `address`
+      await updateFundsLastRequestDate(address, combination);
+    }
 
     interaction.editReply({
       embeds: [
