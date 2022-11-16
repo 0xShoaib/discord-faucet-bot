@@ -1,0 +1,9 @@
+import { IClient } from "../types";
+
+module.exports = {
+  name: "ready",
+  once: true,
+  async execute(client: IClient) {
+    console.log(`Ready!!! ${client?.user?.tag} is logged in and online.`);
+  },
+};
