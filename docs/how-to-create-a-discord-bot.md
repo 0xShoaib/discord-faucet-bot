@@ -38,7 +38,12 @@
 
 15. Select the server on which you want to add the bot and click `Continue`.
 
+<img width="329" alt="DB-1" src="https://user-images.githubusercontent.com/52698465/202235948-82976d29-8396-4f20-8209-56d4d6630e79.png">
+
+
 16. You will be able to see the permissions you are giving to the bot, once all checked click on `Authorize`.
+
+<img width="289" alt="DB-2" src="https://user-images.githubusercontent.com/52698465/202235960-98b030de-8df4-417a-ad6d-e97a8d80da2b.png">
 
 17. Once authorized, the bot will be added to your server.
 
