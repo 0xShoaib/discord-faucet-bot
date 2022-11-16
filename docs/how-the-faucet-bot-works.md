@@ -15,6 +15,9 @@
      network
    )} network at the moment.`;
    ```
+   
+   <img width="342" alt="image" src="https://user-images.githubusercontent.com/52698465/202237712-82b4029f-653f-49ec-a988-54fccbbb634a.png">
+
 
 5. If returns `true` then the requested combination `is valid`, and the bot will call the below function.
 
@@ -76,6 +79,8 @@
 
 15. If the `isTimeRestrictionForFaucet = true` then, the bot will returns a message to the user informing about the Cooldown Time Remaining i.e `duration` for the `combination`, and the execution will terminate.
 
+    <img width="472" alt="SS-5" src="https://user-images.githubusercontent.com/52698465/202234899-23f9ed59-f897-49fe-9256-dfe1ccea3725.png">
+
 16. Now, in the `handleTransaction()`, first we call the `sendTokensOnNetwork()` function
 
     ```typescript
@@ -93,6 +98,9 @@
       network
     )}.`;
     ```
+    
+    <img width="306" alt="image" src="https://user-images.githubusercontent.com/52698465/202238145-7f0c4f26-3790-4c9f-9b16-542f1f7d51d1.png">
+
 
 18. If the bot has the `txHash`, then it will get the `TransactionResponse` from the `getTransaction()` function offered in `ether` library.
 
@@ -102,7 +110,11 @@
 
 19. Then the bot will send an `embed` message to the user informing about that the request is in `pending` status along with the `txHash` and the bot will wait until the transaction is processed.
 
+    <img width="479" alt="SS-3" src="https://user-images.githubusercontent.com/52698465/202234909-73f871c9-11de-43f7-ab15-540c9204df44.png">
+
 20. Once the transaction is processed, the will update the `embed` message and inform user about the status i.e is transaction `success` or `failed`.
+
+    <img width="474" alt="SS-4" src="https://user-images.githubusercontent.com/52698465/202234887-61657f8f-d722-48c5-b0cc-7e7b9d2d33b5.png">
 
 21. If the status is `success` then the bot will update the database with the new `timestamp` for the `combination` for network and `token` by calling the `updateFundsLastRequestDate()` function.
 
